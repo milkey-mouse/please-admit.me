@@ -18,7 +18,17 @@ layout: compress
 </head>
 
 <body>
-  {% include header.html %}
+  <header>
+    <nav class="navbar navbar-expand navbar-expand-sm navbar-dark bg-dark">
+      <ul class="navbar-nav navbar-spread mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="/">home</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/blog">blog</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/about">about</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/resume">résumé</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
   {% assign index = page.path | size | minus: 2 %}
   {% assign extension = page.path | slice: index, 2 %}
   {% if extension == "md" %}
@@ -29,7 +39,24 @@ layout: compress
   {% else %}
   {{ content }}
   {% endif %}
-  {% include footer.html %}
+  <footer class="text-muted">
+    <div class="container">
+      Site content © 2019 Bobby Avery.
+      {% if page.license_raw %}
+      {{ page.license_raw }}
+      {% elsif page.license %}
+      {{ page.title }} is licensed under the
+      <a href="https://choosealicense.com/licenses/{{ page.license | downcase }}/">{{ page.license }}</a> license.
+      {% else %}
+      Many featured projects have
+      <a href="https://choosealicense.com/licenses/mit/">open</a>
+      <a href="https://choosealicense.com/licenses/gpl-3.0/">licenses</a>.
+      {% endif %}
+      {% if page.feed %}
+      </br><a href="{{ page.feed }}" class="btn btn-outline-secondary btn-sm">{% include feed.svg %} Atom feed available.</a>
+      {% endif %}
+    </div>
+  </footer>
 </body>
 
 </html>
