@@ -105,12 +105,6 @@ footer {
   fill: white;
 }
 
-/* in most posts we want SVGs to be treated like images */
-svg {
-  display: block;
-  margin: auto;
-}
-
 /* justify text by default */
 p {
   text-align: justify;
