@@ -1,0 +1,17 @@
+<div class="row no-gutters rounded position-relative border">
+    {% if include.side == "left" %}
+    <div class="col-md-6 mb-md-0 p-md-4">
+        <img src="{{ include.post.image }}" class="media-img rounded" alt="'{{ include.post.title }}' thumbnail">
+    </div>
+    {% endif %}
+    <div class="col-md-6 p-4 {% if include.side == "left" %}pl-md-0 {% endif %}position-static">
+        <h5 class="mt-0">{{ include.post.title }}</h5>
+        <p>{{ include.post.description }}</p>
+        <a href="{{ include.post.url }}" class="stretched-link">Read more</a>
+    </div>
+    {% if include.side == "right" %}
+    <div class="col-md-6 mb-md-0 p-md-4">
+        <img src="{{ include.post.image }}" class="media-img rounded" alt="'{{ include.post.title }}' thumbnail">
+    </div>
+    {% endif %}
+</div>

@@ -1,0 +1,18 @@
+{% capture embed_url %}
+{% if include.video_id %}
+https://www.youtube.com/embed/{{ include.video_id }}{% if include.start %}?start={{ include.start }}{% endif %}
+{% else %}
+{{ include.embed_url }}
+{% assign index = include.embed_url | size | minus: 4 %}
+{% assign extension = include.embed_url | slice: index, 4 %}
+{% endif %}
+{% endcapture %}
+<div class="embed-responsive embed-responsive-{% if include.widescreen != false %}16by9{% else %}4by3{% endif %}">
+    {% if extension == ".pdf" %}
+    <object class="embed-responsive-item" data="{{ embed_url }}" type="application/pdf">
+        Your browser does not support PDFs. Download [here]({{ embed_url }}) to view.
+    </object>
+    {% else %}
+    <iframe class="embed-responsive-item" src="{{ embed_url }}" allowfullscreen></iframe>
+    {% endif %}
+</div>

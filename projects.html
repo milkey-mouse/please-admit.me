@@ -1,0 +1,22 @@
+---
+title: All Projects
+---
+
+<main role="main">
+    <div class="container readable-margin">
+        <h1 class="mt-5 text-center">{{ page.title }}</h1>
+    </div>
+    <div class="album py-5">
+        <div class="container">
+            <div class="row">
+                {% assign posts = site.projects | reverse %}
+                {% for post in posts %}
+                {% include card.html post=post %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="container readable-margin">
+        <p class="lead text-muted text-center"><em>...and I'm not out of ideas yet!</em></p></br>
+    </div>
+</main>
