@@ -1,0 +1,15 @@
+<footer class="text-muted">
+    <div class="container">
+        Site content © 2019 Bobby Avery.
+        {% if page.license_raw %}
+        {{ page.license_raw }}
+        {% elsif page.license %}
+        {{ page.title }} is licensed under the
+        <a href="https://choosealicense.com/licenses/{{ page.license | downcase }}/">{{ page.license }}</a> license.
+        {% else %}
+        Many featured projects have
+        <a href="https://choosealicense.com/licenses/mit/">open</a>
+        <a href="https://choosealicense.com/licenses/gpl-3.0/">licenses</a>.
+        {% endif %}
+    </div>
+</footer>

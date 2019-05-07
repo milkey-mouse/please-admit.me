@@ -1,0 +1,27 @@
+---
+title: Student, Maker, Student Maker
+---
+
+<main role="main" class="bg-light">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">
+                Hi! I'm <a class="muted-link" href="/about">Bobby Avery</a>.</br>
+                I like to make stuff like this:
+            </h1>
+        </div>
+    </section>
+    <div class="album py-5">
+        <div class="container">
+            <div class="row">
+                {% assign featured = site.projects | where: "featured", "true" | reverse %}
+                {% for post in featured %}
+                {% include card.html post=post %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="container readable-margin">
+        <a class="btn btn-outline-primary btn-lg btn-block" href="/projects" role="button">See more projects</a></br>
+    </div>
+</main>

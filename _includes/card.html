@@ -1,0 +1,13 @@
+<div class="col-xl-4 col-md-6 d-flex align-items-stretch">
+    <div class="card shadow mb-4">
+        <div class="card-img-top">
+            <svg viewBox="0 0 16 9"></svg>
+            <img src="{{ include.post.image }}" alt="'{{ include.post.title }}' thumbnail">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ include.post.title }}</h5>
+            <p class="card-text">{{ include.post.description }}</p>
+            <a href="{{ include.post.url }}" class="btn btn-outline-secondary stretched-link">Read more</a>
+        </div>
+    </div>
+</div>

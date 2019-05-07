@@ -1,0 +1,17 @@
+---
+title: Featured Blog Posts
+---
+
+<main role="main">
+    <div class="container readable-margin">
+        <h1 class="mt-5 text-center">{{ page.title }}</h1>
+        <div class="container">
+            <div class="row">
+                {% assign posts = site.projects | reverse %}
+                {% for post in posts %}
+                {% capture side %}{% if post.image %}{% cycle "left", "right" %}{% endif %}{% endcapture %}
+                {% include media.html post=post side=side %}
+                {% endfor %}
+            </div>
+        </div>
+</main>

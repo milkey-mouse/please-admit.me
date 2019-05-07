@@ -1,0 +1,43 @@
+# make local builds as close to GitHub Pages as possible 
+encoding: UTF-8
+safe: true  # non-overridable
+highlighter: rouge  # non-overridable
+kramdown:
+  math_engine: mathjax  # non-overridable
+  syntax_highlighter: rouge # non-overridable
+  input: GFM
+  hard_wrap: false
+gfm_quirks: paragraph_end
+
+author: "Bobby Avery"
+title: "Bobby Avery"
+collections:
+  blog:
+    output: true
+    permalink: /:collection/:title/
+  projects:
+    output: true
+    permalink: /:collection/:title/
+description: "The personal website of Bobby Avery."
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - bootstrap
+feed:
+  collections:
+    blog:
+      path: /blog/feed.xml
+    projects:
+      path: /feed.xml
+  path: /all.xml
+permalink: /:title/
+plugins:
+  - jekyll-feed
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-include-cache
