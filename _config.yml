@@ -18,6 +18,11 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
+compress_html:
+  clippings: all
+  endings: all
+  ignore:
+    envs: []
 description: "The personal website of Bobby Avery."
 defaults:
   -
@@ -41,3 +46,5 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-include-cache
+sass:
+  style: compressed
