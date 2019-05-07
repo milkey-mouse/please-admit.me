@@ -20,6 +20,7 @@ collections:
     permalink: /:collection/:title/
 compress_html:
   clippings: all
+  comments: ["<!--", "-->"]
   endings: all
   ignore:
     envs: []
@@ -30,6 +31,18 @@ defaults:
       path: ""
     values:
       layout: default
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      feed: /feed.xml
+  -
+    scope:
+      path: ""
+      type: "blog"
+    values:
+      feed: /blog/feed.xml
 exclude:
   - bootstrap
 feed:
@@ -38,6 +51,8 @@ feed:
       path: /blog/feed.xml
     projects:
       path: /feed.xml
+  # we don't actually want this feed, but we
+  # have to turn it on for jekyll-feed to run
   path: /all.xml
 permalink: /:title/
 plugins:

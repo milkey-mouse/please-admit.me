@@ -10,7 +10,9 @@ layout: compress
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {% seo %}
-  <link type="application/atom+xml" rel="alternate" href="{{ page.feed_url }}" title="Bobby Avery" />
+  {% if page.feed %}
+  <link type="application/atom+xml" rel="alternate" href="{{ page.feed }}" title="Bobby Avery" />
+  {% endif %}
   <link href="/assets/bootstrap.css" rel="stylesheet">
   <link href="/assets/common.css" rel="stylesheet">
 </head>
