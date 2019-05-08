@@ -61,5 +61,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-include-cache
+relative_links:
+  collections: true
 sass:
   style: compressed
