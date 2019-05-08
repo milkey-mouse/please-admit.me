@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+{{ content }}
+{% if page.signed != false %}
+<div class="col-md-3 offset-md-8"><a href="{{ site.github.repository_url }}/blob/{{ site.github.build_revision }}/{{ page.path }}">Signed</a>,</br><p class="pl-3">{{ site.author }}</p></div>
+{% endif %}

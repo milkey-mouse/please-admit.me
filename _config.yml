@@ -42,6 +42,7 @@ defaults:
       path: ""
       type: "blog"
     values:
+      layout: signed
       feed: /blog/feed.xml
 exclude:
   - bootstrap
