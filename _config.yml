@@ -45,6 +45,8 @@ defaults:
       feed: /blog/feed.xml
 exclude:
   - bootstrap
+optional_front_matter:
+  enabled: false
 feed:
   collections:
     blog:
@@ -56,12 +58,23 @@ feed:
   path: /all.xml
 permalink: /:title/
 plugins:
+  - jekyll-coffeescript  # non-overridable
+  - jekyll-default-layout  # non-overridable
+  - jekyll-gist  # non-overridable
+  - jekyll-github-metadata  # non-overridable
+  - jekyll-optional-front-matter  # non-overridable
+  - jekyll-paginate  # non-overridable
+  - jekyll-readme-index  # non-overridable
+  - jekyll-relative-links  # non-overridable
+  - jekyll-titles-from-headings  # non-overridable
   - jekyll-feed
-  - jekyll-relative-links
+  - jekyll-include-cache
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-include-cache
+readme_index:
+  enabled: false
 relative_links:
   collections: true
+repository: milkey-mouse/please-admit.me
 sass:
   style: compressed
