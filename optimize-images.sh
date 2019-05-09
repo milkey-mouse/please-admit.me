@@ -58,5 +58,7 @@ while IFS=$'\n' read -r f; do
     CODE=1
 done < <(find assets/originals -type f | cut -d/ -f3- | sort | comm -23 - "$TMP")
 
+du -Ssch assets/originals assets
+
 rm "$TMP"
 exit $CODE
