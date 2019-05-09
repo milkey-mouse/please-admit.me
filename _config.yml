@@ -78,3 +78,10 @@ relative_links:
 repository: milkey-mouse/please-admit.me
 sass:
   style: compressed
+social:
+  links:
+    - https://github.com/milkey-mouse
+    - https://news.ycombinator.com/user?id=milkey_mouse
+    - https://hackaday.io/MilkeyMouse
+    - https://keybase.io/milkeymouse
+google_site_verification: XV-3PEUXIABK5mXgFTp0vUdJZUppWhNy698Vk9CdShs
