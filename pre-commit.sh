@@ -23,6 +23,6 @@ while IFS= read -rd "" f; do
         # it's OK for a video or SVG not to have an optimized version
         CODE=1
     fi
-done < <(comm -z3 <(git ls-files -z assets | cut -zd/ -f2- | sort -z) <(git ls-files -z assets/original | cut -zd/ -f2- | sort -z))
+done < <(git ls-files -z assets | grep -zE '\.(png|jpg)$' | sed -z 's#^assets/\(originals/\)\?##' | sort -z | uniq -uz)
 
 exit ${CODE}
