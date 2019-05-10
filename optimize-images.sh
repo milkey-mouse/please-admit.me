@@ -2,14 +2,26 @@
 
 PARALLEL=1
 ALGORITHM=lanczos
-QUALITY=1 # from 1-31 (lower is better)
+QUALITY=80 # from 1-100
 
 function resize() {
     echo "$1"  # edit tracking for warnings later
     echo resize $* 1>&2
     (
+        case "$1" in
+        "*.jpg")
+          ffmpeg -hide_banner -nostdin -loglevel warning -i "assets/originals/$1" \
+          -vf scale=w="$2":h="$3":force_original_aspect_ratio="${CROP:-increase}":flags="${ALGORITHM:lanczos}" -f tga - | \
+          cjpeg -targa -optimize -progressive -quality "${QUALITY}" -outfile "assets/$1"
+          ;;
+        "*")
+          ffmpeg -hide_banner -nostdin -loglevel warning -i "assets/originals/$1" \
+          -vf scale=w="$2":h="$3":force_original_aspect_ratio="${CROP:-increase}":flags="${ALGORITHM:lanczos}" \
+          -compression_level 100 -y "assets/$1"
+          ;;
+        esac
+
         # TODO: never resize larger
-        ffmpeg -hide_banner -nostdin -loglevel warning -i "assets/originals/$1" -vf scale=w="$2":h="$3":force_original_aspect_ratio="${CROP:-increase}":flags="${ALGORITHM:lanczos}" -compression_level 100 -q:v "${QUALITY}" -y "assets/$1"
     ) &
     [ "${PARALLEL}" == "1" ] || wait
 }
@@ -17,8 +29,14 @@ function resize() {
 function optimize() {
     echo "$1"
     echo optimize $* 1>&2
-    # TODO: should work on images too (pngopt?)
-    ps2pdf "assets/originals/$1" "assets/$1"
+    case "$1" in
+      "*.pdf")
+        ps2pdf "assets/originals/$1" "assets/$1"
+        ;;
+      "*.png")
+        # TODO
+        ;;
+    esac
 }
 
 TMP="$(mktemp)"
