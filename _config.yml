@@ -1,14 +1,3 @@
-# make local builds as close to GitHub Pages as possible 
-encoding: UTF-8
-safe: true  # non-overridable
-highlighter: rouge  # non-overridable
-kramdown:
-  math_engine: mathjax  # non-overridable
-  syntax_highlighter: rouge # non-overridable
-  input: GFM
-  hard_wrap: false
-gfm_quirks: paragraph_end
-
 author: "Bobby Avery"
 title: "Bobby Avery"
 collections:
@@ -58,15 +47,7 @@ feed:
   path: /all.xml
 permalink: /:title/
 plugins:
-  - jekyll-coffeescript  # non-overridable
-  - jekyll-default-layout  # non-overridable
-  - jekyll-gist  # non-overridable
-  - jekyll-github-metadata  # non-overridable
-  - jekyll-optional-front-matter  # non-overridable
-  - jekyll-paginate  # non-overridable
-  - jekyll-readme-index  # non-overridable
-  - jekyll-relative-links  # non-overridable
-  - jekyll-titles-from-headings  # non-overridable
+  - github-pages
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
