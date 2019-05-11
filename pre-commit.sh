@@ -14,15 +14,12 @@ rm -r "${TMPDIR}"
 
 # all assets should have a small version for direct use & a large version on clickthrough
 while IFS= read -rd "" f; do
-    if [ -e "assets/original/$f" ]; then
-        (echo "Media assets/original/$f has no shrunk/optimized counterpart" 1>&2)
-    else
-        (echo "Media assets/$f has no original counterpart" 1>&2)
+    CODE=1
+    if fn="$(find ./assets/original -type f -name "$f.*")"; then
+        echo "Media $fn has no shrunk/optimized counterpart"
+    elif fn="$(find ./assets -type f -name "$f.*")"; then
+        echo "Media $fn has no original counterpart"
     fi
-    if grep -qE '\.(png|jpg)$' <<<"$f"; then
-        # it's OK for a video or SVG not to have an optimized version
-        CODE=1
-    fi
-done < <(git ls-files -z assets | grep -zE '\.(png|jpg)$' | sed -z 's#^assets/\(originals/\)\?##' | sort -z | uniq -uz)
+done 1>&2 < <(git ls-files -z assets | grep -zE '\.(png|jpg)$' | sed -z 's#^assets/\(originals/\)\?##;s#^\(.*\)\..*$#\1#' | sort -z | uniq -uz)
 
 exit ${CODE}
