@@ -39,6 +39,14 @@ layout: compress
   {% else %}
   {{ content }}
   {% endif %}
+  {% if page.anchors %}
+  <script>
+    {% include anchor.js %}
+    anchors.options.placement = "left";
+    anchors.options.class = "muted-link no-underline";
+    anchors.add();
+  </script>
+  {% endif %}
   <footer class="text-muted">
     <div class="container">
       Site content © 2019 Bobby Avery.

@@ -35,6 +35,10 @@
   color: #4488FF;
 }
 
+.no-underline {
+  text-decoration: none !important;
+}
+
 /* distribute items across navbar */
 .nav-item {
   font-weight: bold;
