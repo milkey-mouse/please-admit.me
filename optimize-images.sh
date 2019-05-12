@@ -11,15 +11,15 @@ function resize() {
     echo resize $* 1>&2
     (
         # TODO: never resize larger
-        ffmpeg -hide_banner -nostdin -loglevel warning -i "assets/originals/$1" -vf scale=w="$2":h="$3":force_original_aspect_ratio="${CROP:-increase}":flags="${ALGORITHM:lanczos}" -compression_level 100 -q:v "${QUALITY}" -y -- "assets/$1"
+        ffmpeg -hide_banner -nostdin -loglevel warning -i "assets/originals/$1" -vf scale=w="$2":h="$3":force_original_aspect_ratio="${CROP:-increase}":flags="${ALGORITHM:lanczos}" -compression_level 100 -q:v "${QUALITY}" -n -- "assets/$1"
     ) &
     [ "${PARALLEL}" == "1" ] || wait
 }
 
 function optimize() {
     echo "$1"
-    echo optimize $* 1>&2
-    ps2pdf "assets/originals/$1" "assets/$1"
+    echo optimize "$*" 1>&2
+    [ -e "assets/$1" ] || ps2pdf "assets/originals/$1" "assets/$1"
 }
 
 TMP="$(mktemp)"
