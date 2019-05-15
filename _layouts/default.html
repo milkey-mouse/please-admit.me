@@ -50,11 +50,9 @@ layout: compress
   <footer class="text-muted">
     <div class="container">
       Site content © 2019 Bobby Avery.
-      {% if page.license_raw %}
-      {{ page.license_raw }}
-      {% elsif page.license %}
+      {% if page.license %}
       {{ page.title }} is licensed under the
-      <a href="https://choosealicense.com/licenses/{{ page.license | downcase }}/">{{ page.license }}</a> license.
+      <a href="{% if page.license_url %}{{ page.license_url }}{% else %}https://choosealicense.com/licenses/{{ page.license | downcase }}/{% endif %}">{{ page.license }}</a> license.
       {% else %}
       Many featured projects have
       <a href="https://choosealicense.com/licenses/mit/">open</a>
