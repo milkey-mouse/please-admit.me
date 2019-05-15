@@ -22,7 +22,7 @@ Mirrored from [the original post](https://web.archive.org/web/20161030172439/htt
 
 *Follow the instructions located [here](http://www.frontiernerds.com/brain-hack) but instead of [kitschpatrol’s code](https://github.com/kitschpatrol/BrainGrapher), use [my version](https://github.com/milkey-mouse/ArduinoBrainKeyboard) with [this chip](https://www.adafruit.com/products/2000). Also, instead of running the visualizer, just run [Adlez](./2015-06-24-the-legend-of-adlez.md).*
 
-{% include_cached image.html image="adlez-mindflex.png" description="Screenshot of the Adlez "Geeky Options" menu" %}
+{% include_cached image.html image="adlez-mindflex.png" description="Screenshot of the Adlez 'Geeky Options' menu" %}
 
 {% include_cached image.html image="brain-grapher.jpg" description="kitschpatrol's Processing Brain Grapher" %}
 
