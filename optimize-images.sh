@@ -30,7 +30,8 @@ TMP="$(mktemp)"
         resize "$f" 640 360
     done < <(
         find . -type f \( -name '*.md' -o -name '*.html' \) \
-        -execdir grep -Pho "(?<=^image: /assets/).*$" {} \;
+        -execdir grep -Pho "(?<=^image: /assets/).*$" {} \; | \
+        sort -u
     )
 
     # in posts
@@ -38,7 +39,8 @@ TMP="$(mktemp)"
         resize "$f" 650 -1
     done < <(
         find . -type f -name '*.md' \
-        -execdir sed -n 's/^\!\[.*\](\/assets\/\(.*\))$/\1/p' {} \;
+        -execdir sed -n 's/^\!\[.*\](\/assets\/\(.*\))$/\1/p;s/^{% include_cached image\.html image="\(.*.[pj][np]g\)" description=".*" %}$/\1/p' {} \; | \
+        sort -u
     )
 
     # main page hero image
