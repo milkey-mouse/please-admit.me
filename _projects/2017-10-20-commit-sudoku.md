@@ -10,4 +10,4 @@ TODO
 
 [commit-sudoku](https://github.com/milkey-mouse/commit-sudoku)
 
-![commit-sudoku in action](/assets/commit-sudoku.png)
+{% include_cached image.html image="commit-sudoku.png" description="commit-sudoku in action" %}

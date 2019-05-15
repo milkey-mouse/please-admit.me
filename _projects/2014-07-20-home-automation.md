@@ -13,12 +13,12 @@ TODO
 https://hackaday.io/project/2142-poor-mans-home-automation
 
 
-![The Watson app for Windows Phone.](/assets/watson-app.png)
+{% include_cached image.html image="watson-app.png" description="The Watson app for Windows Phone." %}
 
-![The R/C car duct taped to my window...](/assets/watson-blinds.jpg)
+{% include_cached image.html image="watson-blinds.jpg" description="The R/C car duct taped to my window..." %}
 
-![A spare laptop running the Watson software (well, the Windows lockscreen in the photo).](/assets/watson-computer.jpg)
+{% include_cached image.html image="watson-computer.jpg" description="A spare laptop running the Watson software (well, the Windows lockscreen in the photo)." %}
 
-![A fingerprint reader lets me turn on & off different devices with different fingers.](/assets/watson-fingerprint.jpg)
+{% include_cached image.html image="watson-fingerprint.jpg" description="A fingerprint reader lets me turn on & off different devices with different fingers." %}
 
-![Screenshot of the Watson software (acting as an alarm clock).](/assets/watson-screenshot.png)
+{% include_cached image.html image="watson-screenshot.png" description="Screenshot of the Watson software (acting as an alarm clock)." %}

@@ -6,7 +6,7 @@ license: MIT
 published: false
 ---
 
-![Basement lighting panorama](/assets/bamboozled-panorama.jpg)
+{% include_cached image.html image="bamboozled-panorama.jpg" description="Basement lighting panorama" %}
 
 Previously known as Boblight, [BamboozLED](https://github.com/milkey-mouse/BamboozLED)
 

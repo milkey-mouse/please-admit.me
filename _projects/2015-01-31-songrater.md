@@ -9,6 +9,6 @@ license: MIT
 
 This project, never completed, was my first foray into web development with Flask, Redis, Celery, etc.
 
-![SongRater's initial search page](/assets/songrater-search.png)
+{% include_cached image.html image="songrater-search.png" description="SongRater's initial search page" %}
 
-![SongRater's loading screen](/assets/songrater-analyze.png)
+{% include_cached image.html image="songrater-analyze.png" description="SongRater's loading screen" %}
