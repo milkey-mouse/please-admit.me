@@ -16,7 +16,7 @@ The only problem with the kit was its flimsy cardboard case. While a neat design
 
 {% include_cached image.html image="rephone-origami.jpg" description="The stock case for the 'RePhone Kit Create,' if you can call it a case at all." %}
 
-In comparison, the acrylic case I designed is more durable, mountable, waterproof (with the addition of a silicone gasket), can be lasercut (either en masse, at home, or ordered from a service such as [DirtyPCBs Laser Cuts]()—i.e. Shenzhen), and is transparent/looks cool.
+In comparison, the acrylic case I designed is more durable, mountable, waterproof (with the addition of a silicone gasket), can be lasercut (either en masse, at home, or ordered from a service such as [DirtyPCBs Laser Cuts](https://dirtypcbs.com/store/lasercut)—i.e. Shenzhen), and is transparent/looks cool.
 
 I killed many metaphorical birds with one stone with this project in that I learned a lot about Fusion 360 (which I had only picked up a few months prior to this project) and industrial design, learned how to program the weird MCU on the RePhone board, made some money (well, broke even) selling the cases, and finally found a use for the RePhone kit gathering dust in the form of a bike computer.
 
