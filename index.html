@@ -17,7 +17,7 @@ permalink: /
             <div class="row">
                 {% assign featured = site.projects | where: "featured", "true" | reverse %}
                 {% for post in featured %}
-                {% include card.html post=post %}
+                {% include_cached card.html post=post %}
                 {% endfor %}
             </div>
         </div>

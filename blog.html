@@ -11,7 +11,7 @@ feed: /blog/feed.xml
                 {% assign posts = site.projects | reverse %}
                 {% for post in posts %}
                 {% capture side %}{% if post.image %}{% cycle "left", "right" %}{% endif %}{% endcapture %}
-                {% include media.html post=post side=side %}
+                {% include_cached media.html post=post side=side %}
                 {% endfor %}
             </div>
         </div>

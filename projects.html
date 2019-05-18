@@ -12,7 +12,7 @@ feed: /feed.xml
             <div class="row">
                 {% assign posts = site.projects | reverse %}
                 {% for post in posts %}
-                {% include card.html post=post %}
+                {% include_cached card.html post=post %}
                 {% endfor %}
             </div>
         </div>
