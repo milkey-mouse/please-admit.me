@@ -2,7 +2,7 @@
 
 
 git diff --name-only --cached -z | grep -z '\.md$' | xargs -0rn1 \
-sh -c 'sed -i "/^anchors: true$/d" "$1"; sed "2,/^---$/ d" "$1" | grep -q "^#" && sed -i "0,/^---$/! {0,/^---$/ s/^---$/anchors: true\n---/}" "$1"; git add "$1"' sh
+sh -c 'sed -i "/^_anchors: true$/d" "$1"; sed "2,/^---$/ d" "$1" | grep -q "^#" && sed -i "0,/^---$/! {0,/^---$/ s/^---$/_anchors: true\n---/}" "$1"; git add "$1"' sh
 
 # remove EXIF and other metadata from photos & other media (sometimes this even includes geotags!)
 git diff --name-only --cached -z assets | xargs -0rn1 sh -c 'exiftool -all= -overwrite_original "$1" && git add "$1"' sh

@@ -39,7 +39,7 @@ layout: compress
   {% else %}
   {{ content }}
   {% endif %}
-  {% if page.anchors %}
+  {% if page._anchors %}
   <script>
     {% include_cached anchor.js %}
     anchors.options.placement = "left";
