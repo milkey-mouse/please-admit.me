@@ -105,10 +105,6 @@ footer {
     opacity: 1;
 }
 
-.white-icon path {
-  fill: white;
-}
-
 /* justify text by default */
 p {
   text-align: justify;
@@ -118,22 +114,6 @@ p {
 .card-text {
   height: 4.5rem;
 }
-/*.card-body {
-  margin-bottom: 2.5rem; 
-}
-
-.card-btn {
-  position: absolute;
-  bottom: 1.25rem;
-}*/
-
-/* thumbnail images should be cropped to fit the same aspect ratio */
-/*.card-img-top {
-  object-fit: cover;
-  width: 100%;
-  padding-top: 56.25%;
-  overflow: hidden;
-}*/
 
 .card-img-top {
   display: grid;
@@ -157,4 +137,16 @@ img {
 .media-img {
   height: 100%;
   object-fit: cover;
+}
+
+.card-date {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+}
+
+.media-date {
+  float: right;
+  position: relative;
+  bottom: .125rem;
 }

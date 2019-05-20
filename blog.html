@@ -1,5 +1,5 @@
 ---
-title: Featured Blog Posts
+title: Blog Posts
 feed: /blog/feed.xml
 ---
 
@@ -10,7 +10,7 @@ feed: /blog/feed.xml
             <div class="row">
                 {% assign posts = site.blog | reverse %}
                 {% for post in posts %}
-                {% capture side %}{% if post.image %}{% cycle "left", "right" %}{% endif %}{% endcapture %}
+                {% capture side %}{% if post.image %}{% cycle "l", "r" %}{% endif %}{% endcapture %}
                 {% include_cached media.html post=post side=side %}
                 {% endfor %}
             </div>

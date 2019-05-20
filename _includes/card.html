@@ -8,6 +8,9 @@
             <h5 class="card-title">{{ include.post.title }}</h5>
             <p class="card-text">{{ include.post.description }}</p>
             <a href="{{ include.post.url }}" class="btn btn-outline-secondary stretched-link">Read more</a>
+            {% if include.post.date %}
+                {% include_cached date.html class="card-date" format="iso" date=include.post.date grade=include.post._grade %}
+            {% endif %}
         </div>
     </div>
 </div>

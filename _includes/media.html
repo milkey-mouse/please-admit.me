@@ -5,24 +5,22 @@
 {% endcapture %}
 
 {% capture description %}
-{% if include.side == "left" %}
-<div class="p-4 col-md-6 pl-md-0 position-static">
-{% elsif include.side == "right" %}
-<div class="p-4 col-md-6 position-static">
-{% else %}
-<div class="p-4 position-static">
-{% endif %}
+
+<div class="p-4 w-100 {% if include.post.image %}col-md-6 p{{ include.side }}-md-0 {% endif %}position-static">
     <h5 class="mt-0">{{ include.post.title }}</h5>
     <p>{{ include.post.description }}</p>
     <a href="{{ include.post.url }}" class="stretched-link">Read more</a>
+    {% if include.post.date %}
+        {% include_cached date.html class="media-date" format="iso" date=include.post.date %}
+    {% endif %}
 </div>
 {% endcapture %}
 
-<div class="row no-gutters align-items-center position-relative">
-    {% if include.side == "left" %}
+<div class="row w-100 no-gutters align-items-center position-relative">
+    {% if include.side == "l" %}
         {{ thumbnail }}
         {{ description }}
-    {% elsif include.side == "right" %}
+    {% elsif include.side == "r" %}
         {{ description }}
         {{ thumbnail }}
     {% else %}

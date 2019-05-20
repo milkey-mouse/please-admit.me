@@ -34,6 +34,11 @@ layout: compress
   {% if extension == "md" %}
   <main role="main" class="container readable-margin">
     <h1 class="mt-5">{{ page.title }}</h1>
+    {% if page.date %}
+    <p>
+        {% include_cached date.html date=page.date grade=page._grade %}
+    </p>
+    {% endif %}
     {{ content }}
   </main>
   {% else %}
@@ -59,7 +64,11 @@ layout: compress
       <a href="https://choosealicense.com/licenses/gpl-3.0/">licenses</a>.
       {% endif %}
       {% if page.feed %}
-      </br><a href="{{ page.feed }}" class="btn btn-outline-secondary btn-sm">{% include_cached feed.svg %} Atom feed available.</a>
+      </br>
+      <a href="{{ page.feed }}" class="btn btn-outline-secondary btn-sm">
+        {% include_cached feed.svg %}
+        <span class="align-middle"> Atom feed available.</span>
+      </a>
       {% endif %}
     </div>
   </footer>
