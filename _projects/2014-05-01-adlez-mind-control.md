@@ -3,14 +3,13 @@ title: Brain-Controlled Legend of Adlez
 image: /assets/mindflex-irl.jpg
 description: A hacked EEG headset slows down time ingame when the user concentrates.
 featured: true
-published: false
 ---
 
 In 6th grade, a science teacher let me borrow a mysterious headset from a previous student. I soon found out it was a [MindFlex](https://store.neurosky.com/products/mindflex) toy, with a [NeuroSky](http://neurosky.com/) EEG module inside. Even though the toy [kind](https://www.amazon.com/product-reviews/B004GHNFKK?filterByStar=two_star) [of](https://www.spiegel.de/spiegel/a-679480.html) [sucked](https://www.spiegel.de/wissenschaft/technik/hirnsteuerungs-studie-wenn-der-ball-nicht-macht-was-der-kopf-will-a-761169.html), the headset part was still interesting for its "mind-reading" capabilities.
 
 After probing an aftermarket headphone jack on the side of the headset, I figured out the student who bought the headset had already soldered connections to the EEG module. I crammed an Arduino and all the other requisite hardware into a Tic Tac box and the rest is software.
 
-Before the [release](./2015-06-24-the-legend-of-adlez.md) of The Legend of Adlez, I was experimenting with the TODO
+Before the [release](./2015-06-24-the-legend-of-adlez.md) of The Legend of Adlez, I was experimenting with the EEG hardware, [watched the Matrix](https://www.youtube.com/watch?v=ggFKLxAQBbc&t=37), and put two and two together. I modified Adlez to slow down time ingame based on how hard I concentrate.
 
 Rather sensationally, I called this "mind control." Technically it *is* control *by* minds. 🤷
 
@@ -27,3 +26,7 @@ Mirrored from [the original post](https://web.archive.org/web/20161030172439/htt
 {% include_cached image.html image="brain-grapher.jpg" description="kitschpatrol's Processing Brain Grapher" %}
 
 {% include_cached embed.html video_id="gQqw-Zghsms" start=64 %}
+
+I found a second headset on eBay and made another Arduino interface box using the same schematic and code, this time with dollar store wire in a plastic Easter egg. (I really wish I had pictures of this!) This way even after I returned the headset to my teacher I could still make EEG-based games for the small price of my earlobes[^1].
+
+[^1]: Because the MindFlex grounds the EEG sensors via clips on the user's earlobes, burning earlobes are a common side effect if the interface isn't conductive (wet with salt water) enough!
