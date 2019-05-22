@@ -4,6 +4,7 @@ image: /assets/spinner-tester.jpg
 description: Use infrared sensors and calibrated motors to determine fidget spinner superiority.
 license: WTFPL
 published: false
+_grade: 9
 ---
 
 TODO

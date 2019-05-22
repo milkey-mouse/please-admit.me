@@ -4,6 +4,7 @@ image: /assets/minecraft-debug.png
 description: Use computer vision to automate vanilla Minecraft.
 license: MIT
 published: false
+_grade: 8
 ---
 
 TODO

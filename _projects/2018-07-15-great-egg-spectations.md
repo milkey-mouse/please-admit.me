@@ -4,6 +4,7 @@ image: /assets/basket-thumbnail.jpg
 description: A networked swarm of motorized egg cups uses computer vision technology to ensure eggs are always watching you.
 published: false
 license: WTFPL
+_grade: 10
 ---
 
 TODO

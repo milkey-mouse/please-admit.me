@@ -4,6 +4,7 @@ image: /assets/rephone-right.jpg
 description: A simple, durable, lasercut, stackable, weatherproof acrylic case for the RePhone kit.
 license: CC BY-NC-SA 3.0
 license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+_grade: 10
 ---
 
 {% include_cached image.html image="rephone-lightbox.jpg" description="They say you should put the most interesting part above the fold so people keep reading." %}

@@ -3,6 +3,7 @@ title: Brain-Controlled Legend of Adlez
 image: /assets/mindflex-irl.jpg
 description: A hacked EEG headset slows down time ingame when the user concentrates.
 featured: true
+_grade: 5
 ---
 
 In 6th grade, a science teacher let me borrow a mysterious headset from a previous student. I soon found out it was a [MindFlex](https://store.neurosky.com/products/mindflex) toy, with a [NeuroSky](http://neurosky.com/) EEG module inside. Even though the toy [kind](https://www.amazon.com/product-reviews/B004GHNFKK?filterByStar=two_star) [of](https://www.spiegel.de/spiegel/a-679480.html) [sucked](https://www.spiegel.de/wissenschaft/technik/hirnsteuerungs-studie-wenn-der-ball-nicht-macht-was-der-kopf-will-a-761169.html), the headset part was still interesting for its "mind-reading" capabilities.

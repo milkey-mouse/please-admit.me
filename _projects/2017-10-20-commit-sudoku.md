@@ -4,6 +4,7 @@ image: /assets/commit-sudoku.png
 description: A Git pre-commit hook forces you to solve a cell of a Sudoku board every time you want to push changes.
 license: MIT
 published: false
+_grade: 10
 ---
 
 TODO

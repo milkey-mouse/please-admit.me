@@ -3,6 +3,7 @@ title: The Legend of Adlez
 image: /assets/trifarce.png
 description: A wacky parody of The Legend of Zelda
 published: false
+_grade: 6
 ---
 
 TODO

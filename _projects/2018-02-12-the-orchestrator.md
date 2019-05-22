@@ -4,6 +4,7 @@ title: The Orchestrator
 description: Beat bosses by playing music using real instruments! With The Orchestrator, your only input device is a microphone.
 license: MIT
 published: false
+_grade: 10
 ---
 
 TODO

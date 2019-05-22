@@ -3,6 +3,7 @@ title: SongRater
 image: /assets/songrater-search.png
 description: "\"Objective\" automatic ratings for songs."
 license: MIT
+_grade: 6
 ---
 
 [SongRater](https://github.com/milkey-mouse/SongRater) is a satirical "objective" automatic rating system of songs based on what an 11-year-old would think of their lyrics.

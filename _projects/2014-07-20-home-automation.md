@@ -4,6 +4,7 @@ image: /assets/watson-screenshot.png
 description: DIY home automation on a $50 budget
 license: MIT
 published: false
+_grade: 5
 ---
 
 TODO
