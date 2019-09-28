@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exit 0
+
 # add _grade tag to put grade # in rendered date
 git diff --name-only --cached -z _projects | grep -z '\.md$' | \
 while IFS= read -rd "" f; do
