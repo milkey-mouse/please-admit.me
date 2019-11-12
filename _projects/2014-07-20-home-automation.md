@@ -3,7 +3,6 @@ title: Poor Man's Home Automation
 image: /assets/watson-screenshot.png
 description: DIY home automation on a $50 budget.
 license: MIT
-published: false
 _grade: 5
 ---
 
@@ -15,15 +14,25 @@ But 5th grade me had none of the tools, cash, or patience necessary for these pr
 
 {% include_cached image.html image="watson-tower.jpg" description="This 'tower' of a couple spare extenal hard drives, Arduinos, and a laptop powered the Watson system." %}
 
+I [documented](https://hackaday.io/project/2142-poor-mans-home-automation) the project for the 2014 Hackaday Prize (the first one). I wrote [tutorials](https://github.com/milkey-mouse/watson/tree/master/instructions) on how to build each of the physical components (not that they're particularly replicable, or that one would want to build them how I had). I still regularly refer to the [graphic](https://github.com/milkey-mouse/watson/blob/master/instructions/blinds/wires.png) I made of a USB cable's pinout. I even printed out a daily summary (it was cheaper than a display; young me didn't understand the environmental implications :P) I made this video as part of my Hackaday Prize entry:
+
 {% include_cached embed.html video_id="8iizb5JBA54" start=5 %}
+
+I made an app for my Windows Phone[^wp] to control the systems in my room.
 
 {% include_cached image.html image="watson-app.png" description="The Watson app for Windows Phone." %}
 
+My solution to automatically open and close my blinds was a remote control car duct taped to my window...
+
 {% include_cached image.html image="watson-blinds.jpg" description="The R/C car duct taped to my window..." %}
 
+A fingerprint reader let me turn different devices on & off with different fingers. This was easier than buying and hooking up regular buttons.
 
 {% include_cached image.html image="watson-fingerprint.jpg" description="A fingerprint reader lets me turn on & off different devices with different fingers." %}
+
+The computer host for the software acted as an alarm clock, with extra data on everything from the school lunch of the day (for which I had to parse a terrible, hand-made PDF irregularly published on the Sodexo website) to the weather to the current amount of resources in Minecraft servers I frequented.
 
 {% include_cached image.html image="watson-screenshot.png" description="Screenshot of the Watson software (acting as an alarm clock)." %}
 
 [^ibm]: To any IBM intellectual property lawyers reading: please excuse 11-year-old me's (lack of) understanding of trademark law.
+[^wp]: The Windows Phone was so great; that and the Zune were the only MS products I liked. I wish they were still around.
